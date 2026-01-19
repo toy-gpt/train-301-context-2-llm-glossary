@@ -1,0 +1,56 @@
+# ============================================================
+# CITATION.cff (How to cite this project)
+# ============================================================
+
+cff-version: "1.2.0"
+type: software
+
+title: "Toy-GPT: Next-Token Language Model (2-Token Context Window)"
+version: "0.9.4"
+date-released: "2026-01-18"
+
+authors:
+  - family-names: Case
+    given-names: Denise M.
+    orcid: "https://orcid.org/0000-0001-6165-7389"
+    affiliation: "Northwest Missouri State University, School of Computer Science and Information Systems, Maryville, MO, USA"
+
+repository-code: "https://github.com/toy-gpt/train-301-context-2-llm-glossary"
+url: "https://github.com/toy-gpt/train-301-context-2-llm-glossary"
+license: MIT
+
+abstract: >
+  Toy-GPT is an educational sequence of minimal language-model training repositories.
+  This repository implements a next-token prediction model with a 2-token context window trained with
+  softmax and cross-entropy loss. It serves as a baseline for understanding
+  probabilistic language modeling, training loops, and inspectable model artifacts
+  prior to introducing higher-order context, embeddings, or attention mechanisms.
+
+keywords:
+  # domain
+  - language-models
+  - natural-language-processing
+  - probabilistic-models
+  - next-token-prediction
+
+  # pedagogy
+  - education
+  - computer-science-education
+  - machine-learning-education
+  - teaching
+  - learning
+
+  # methodology
+  - 2-token-context-window
+  - softmax
+  - cross-entropy-loss
+  - gradient-descent
+
+  # software practice
+  - python
+  - reproducible-research
+  - inspectable-artifacts
+  - open-source
+  - github
+
+message: "If you use this software in academic or educational work, please cite it using this file."

@@ -1,0 +1,64 @@
+a large language model is a statistical next token predictor
+a large language model is trained on text
+a large language model produces probabilities over tokens
+
+a token is a unit of text
+a token can be a word
+a token can be part of a word
+a token has no meaning by itself
+
+a corpus is a collection of text
+a corpus is chosen by people
+a corpus determines what a model can learn
+
+training is repeated error minimization
+training adjusts numeric parameters
+training stops when improvement slows
+
+a model is a mathematical function
+a model maps inputs to outputs
+a model does not understand meaning
+
+an embedding is a numeric vector
+an embedding represents a token
+an embedding is learned during training
+
+a weight is a numeric parameter
+a weight scales an input
+a weight is updated during training
+
+a bias is a numeric offset
+a bias shifts a prediction
+a bias helps fit the data
+
+a neural network is a collection of weighted sums
+a neural network applies nonlinear functions
+a neural network is trained using gradients
+
+gradient descent is an optimization method
+gradient descent reduces prediction error
+gradient descent updates parameters
+
+attention is a weighting mechanism
+attention emphasizes relevant tokens
+attention does not create understanding
+
+inference is using a trained model
+inference does not change parameters
+inference produces probabilities
+
+a probability is a number between zero and one
+a probability represents likelihood
+probabilities sum to one
+
+a prompt is input text
+a prompt conditions prediction
+a prompt does not instruct intent
+
+an output is a predicted token
+an output is chosen from probabilities
+an output is not a fact
+
+a language model does not reason
+a language model does not know truth
+a language model predicts patterns in text
