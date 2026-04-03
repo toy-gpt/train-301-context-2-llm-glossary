@@ -1,4 +1,4 @@
-# Toy-GPT: train-301-context-2-llm-glossary-animals
+# Toy-GPT: train-301-context-2-llm-glossary
 
 [![Docs](https://img.shields.io/badge/docs-live-blue)](https://toy-gpt.github.io/train-301-context-2-llm-glossary/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/MIT)
