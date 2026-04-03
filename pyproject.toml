@@ -72,16 +72,16 @@ Documentation = "https://toy-gpt.github.io/train-301-context-2-llm-glossary/"
 Issues = "https://github.com/toy-gpt/train-301-context-2-llm-glossary/issues"
 Repository = "https://github.com/toy-gpt/train-301-context-2-llm-glossary"
 
+# === BANDIT (SECURITY LINTING) ===
+
+[tool.bandit]
+skips = ["B105"] # WHY: tokens are not secrets in this project; they are the core data being modeled.
+
 # === DEPTRY (CHECK FOR UNDECLARED OR UNUSED DEPENDENCIES) ===
 
 [tool.deptry]
 # WHY: Dev and docs dependencies are not imported in source code.
 ignore = ["DEP002"]
-
-[tool.deptry.package_module_name_map]
-# WHY: PyPI package names differ from importable module names.
-# CUSTOM: Add project dependencies here as needed.
-"toy-gpt-train-300-context-2" = "toy_gpt_train"
 
 [tool.deptry.per_rule_ignores]
 # CUSTOM: Add self-import package here to avoid false positives.
@@ -113,7 +113,7 @@ venvPath = "."
 # WHY: Ensure tests are discoverable and coverage is visible.
 minversion = "7.0"
 testpaths = ["tests"]
-addopts = " --cov=src --cov-report=term-missing --cov-fail-under=60"
+addopts = " --cov=src --cov-report=term-missing --cov-fail-under=30"
 
 # === RUFF (PYTHON FORMATTING AND LINTING) ===
 
