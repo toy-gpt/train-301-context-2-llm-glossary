@@ -295,7 +295,7 @@ def main() -> None:
         expected_rows=v * v,
     )
 
-    args: argparse.Namespace = parse_args()
+    args: argparse.Namespace = parse_args([])
 
     # Choose start tokens: CLI args > meta.json > error
     if args.start_tokens:
