@@ -11,7 +11,7 @@
 name = "toy-gpt-train-301-context-2-llm-glossary" # CUSTOM: Package distribution name (use lowercase and dashes).
 readme = "README.md"
 requires-python = ">=3.14"
-dynamic = ["version"] # WHY: Version is managed with scm and source control tags.
+version = "0.1.0" # CUSTOM: Initial version; update as needed for releases.
 
 # CUSTOM: Project metadata.
 authors = [{ name = "Denise Case", email = "dcase@nwmissouri.edu" }]

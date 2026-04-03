@@ -1060,6 +1060,7 @@ wheels = [
 
 [[package]]
 name = "toy-gpt-train-301-context-2-llm-glossary"
+version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "datafun-toolkit" },
