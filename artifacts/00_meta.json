@@ -30,6 +30,10 @@
     "In later stages (500+), embeddings are a learned parameter table."
   ],
   "repo_name": "train-301-context-2-llm-glossary",
+  "start_tokens": [
+    "a",
+    "large"
+  ],
   "training": {
     "epoch_definition": "One epoch is a complete pass through all training pairs. Each pair contributes one gradient update.",
     "epochs": 50,
