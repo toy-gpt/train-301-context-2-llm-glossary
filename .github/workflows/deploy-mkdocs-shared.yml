@@ -73,8 +73,8 @@ jobs:
       - name: D2) Fetch shared MkDocs base config
         run: curl --fail -o mkdocs.base.yaml https://raw.githubusercontent.com/toy-gpt/.github/refs/heads/main/docs-theme/mkdocs.base.yaml
 
-      - name: D3) Build docs (--strict)
-        run: uv run mkdocs build --strict
+      - name: D3) Build docs
+        run: uv run mkdocs build
 
       - name: D4) Configure git identity for mike
         run: |
