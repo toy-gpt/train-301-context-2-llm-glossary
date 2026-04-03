@@ -1,15 +1,17 @@
 """
-tests/test_imports.py
+tests/test_train.py
 
 REQ: Verify that the package can be imported.
 WHY: Minimal correctness requirement.
 
+
+WHY: Each stage should be able to be run independently on any platform.
 """
 
 import importlib
 import sys
 
-PACKAGE_NAME = "toy_gpt_train_llm"  # CUSTOM: Use package name.
+PACKAGE_NAME = "toy_gpt_train"
 
 # Modules that can run with no arguments
 DEMO_MODULES_NO_ARGS = [

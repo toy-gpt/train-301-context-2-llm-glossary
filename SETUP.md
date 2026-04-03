@@ -4,8 +4,7 @@
 
 ## 01: Set Up Machine (Once Per Machine)
 
-Follow the detailed instructions at:
-[**01. Set Up Your Machine**](https://denisecase.github.io/pro-analytics-02/01-set-up-machine/)
+Follow the detailed instructions at [pro-analytics-20](https://denisecase.github.io/pro-analytics-02/) to set up a machine for Python development.
 
 ## 02: Set Up Project (Once Per Project)
 
@@ -33,22 +32,19 @@ Run the following commands, one at a time, hitting ENTER after each:
 ```shell
 uv self update
 uv python pin 3.14
-uv cache clean
 uv sync --extra dev --extra docs --upgrade
 ```
 
 If asked: "We noticed a new environment has been created. Do you want to select it for the workspace folder?" Click **"Yes"**.
 
-Install and run pre-commit checks (repeat git `add` and `commit` twice as needed):
-
 ```shell
 uvx pre-commit install
 git add -A
 uvx pre-commit run --all-files
+# repeat if changes were made
+git add -A
+uvx pre-commit run --all-files
 ```
-
-More detailed instructions are available at:
-[**02. Set Up Your Project**](https://denisecase.github.io/pro-analytics-02/02-set-up-project/)
 
 ## 03: Daily Workflow (Working With Python Project Code)
 
@@ -92,9 +88,10 @@ uv run ruff format .
 uv run ruff check . --fix
 uv run -- python -m pytest
 
+uv run validate-pyproject pyproject.toml
 uv run pyright
 uv run bandit -c pyproject.toml -r src
-uv run validate-pyproject pyproject.toml
+uv run deptry .
 ```
 
 Build and serve docs (hit **CTRL+c** in the VS Code terminal to quit serving):
@@ -113,9 +110,6 @@ git add -A
 git commit -m "update"
 git push -u origin main
 ```
-
-Follow the detailed instructions at:
-[**03. Daily Workflow**](https://denisecase.github.io/pro-analytics-02/03-daily-workflow/)
 
 ## Resources
 
