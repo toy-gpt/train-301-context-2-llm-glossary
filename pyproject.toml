@@ -9,7 +9,7 @@
 name = "toy-gpt-train-301-context-2-llm-glossary" # CUSTOM: Package distribution name (use lowercase and dashes).
 readme = "README.md"
 requires-python = ">=3.14"
-version = "0.1.0" # CUSTOM: Initial version; update as needed for releases.
+version = "0.1.0"
 
 # CUSTOM: Project metadata.
 authors = [{ name = "Denise Case", email = "dcase@nwmissouri.edu" }]
@@ -182,7 +182,7 @@ force-sort-within-sections = true
 # REQ: Google style is the default policy for this repository.
 convention = "google"
 
-# === BUILD SYSTEM ===
+# === BUILD SYSTEM (HATCHLING) ===
 #
 # REQ.PROJECT:
 #   This project MUST define a build system so that local Python modules
@@ -198,27 +198,10 @@ convention = "google"
 # WHY:
 #   A src/ layout prevents accidental imports from the repository root and
 #   ensures consistent behavior across IDEs, tests, and command-line runs.
-
 [build-system]
 # REQ.BUILD: A build backend MUST be declared to enable package discovery.
-build-backend = "setuptools.build_meta"
-requires = [
-    "setuptools>=80.9.0",
-    "setuptools-scm>=9.2.2"
-]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
 
-[tool.setuptools]
-# REQ.PACKAGES: Package discovery MUST be rooted at src/.
-package-dir = { "" = "src" }
-
-[tool.setuptools.packages.find]
-# WHY: Explicitly define package discovery location.
-where = ["src"]
-
-[tool.setuptools_scm]
-# WHY: If someone builds from a source tree without git metadata,
-# this prevents failure and keeps a sensible placeholder.
-fallback_version = "0.1.0"
-# Optional, but recommended: write the computed version into package at build time.
-# Can be read at runtime, without importing setuptools_scm.
-version_file = "src/toy_gpt_train/_version.py" # CUSTOM: Match package name.
+[tool.hatch.build.targets.wheel]
+packages = ["src/toy_gpt_train"]
